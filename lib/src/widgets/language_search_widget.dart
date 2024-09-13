@@ -1,4 +1,5 @@
 import 'package:appflowy_code_block/src/service/actions_service.dart';
+import 'package:appflowy_code_block/src/utils/plataform_check.dart';
 import 'package:appflowy_code_block/src/utils/utils.dart';
 import 'package:appflowy_code_block/src/widgets/selectable_item_list_menu.dart';
 import 'package:appflowy_editor/appflowy_editor.dart';
@@ -74,7 +75,7 @@ class _LanguageSearchWidgetState extends State<LanguageSearchWidget> {
       ],
     );
 
-    return PlatformExtension.isMobile
+    return PlatformCheck.isMobile
         ? child
         : Container(
             width: 140,

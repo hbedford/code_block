@@ -1,4 +1,5 @@
 import 'package:appflowy_code_block/src/service/actions_service.dart';
+import 'package:appflowy_code_block/src/utils/plataform_check.dart';
 import 'package:flutter/material.dart';
 import 'package:appflowy_editor/appflowy_editor.dart';
 import 'package:appflowy_code_block/src/widgets/widgets.dart';
@@ -67,7 +68,7 @@ class _CodeBlockComponentWidgetState extends State<CodeBlockComponentWidget>
     super.initState();
     actionsService = ActionsService(editorState: editorState, node: node);
     setState(() {
-      showActions = PlatformExtension.isMobile;
+      showActions = PlatformCheck.isMobile;
     });
   }
 

@@ -1,3 +1,4 @@
+import 'package:appflowy_code_block/src/utils/plataform_check.dart';
 import 'package:appflowy_editor/appflowy_editor.dart';
 import 'package:appflowy_code_block/src/service/actions_service.dart';
 import 'package:appflowy_code_block/src/widgets/widgets.dart';
@@ -20,7 +21,7 @@ class SwitchLanguageButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ButtonWithTrailingIcon(
       onTap: () {
-        if (PlatformExtension.isMobile) {
+        if (PlatformCheck.isMobile) {
           // show bottom modal sheet with Language selection widget.
           showFlowyMobileBottomSheet(
             context,

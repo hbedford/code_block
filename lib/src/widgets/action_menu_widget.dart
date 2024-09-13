@@ -1,3 +1,4 @@
+import 'package:appflowy_code_block/src/utils/plataform_check.dart';
 import 'package:appflowy_editor/appflowy_editor.dart';
 import 'package:appflowy_code_block/src/service/services.dart';
 import 'package:appflowy_code_block/src/widgets/widgets.dart';
@@ -96,7 +97,7 @@ class _ActionsContainerState extends State<ActionsContainer> {
       decoration:
           BoxDecoration(borderRadius: BorderRadiusDirectional.circular(5)),
       child: Row(
-        children: PlatformExtension.isMobile ? [actions.first] : actions,
+        children: PlatformCheck.isMobile ? [actions.first] : actions,
       ),
     );
   }
