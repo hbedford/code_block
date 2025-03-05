@@ -44,7 +44,4 @@ class CodeBlockComponentBuilder extends BlockComponentBuilder {
       ),
     );
   }
-
-  @override
-  bool validate(Node node) => node.delta != null;
 }
